@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+}
+
+body {
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+
+.cont {
+  margin-right: 5rem;
+  margin-left: 5rem;
+}
+
+.cari {
+  top: 20%;
+  right: 5%;
+}
+
+button.cari {
+  width: 10%;
+  background-color: transparent;
+  border: 0;
+}
+button.cari > img {
+  margin: 0.2rem;
+  width: 60%;
+  opacity: 0.5;
+}
+
+.container-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  background-color: white;
+  padding-right: 5rem;
+  padding-left: 5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.container {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  background-color: white;
+  padding-right: 5rem;
+  padding-left: 5rem;
+  padding-bottom: 2.5rem;
+}
+
+.field {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  width: 100%;
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid darkgray;
+}
+
+.field:focus {
+  border: 1px solid darkgrey;
+}
+.container > ul > li {
+  margin-top: 0.5rem;
+}
+
+li > label {
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+  font-weight: 500;
+}
+
+.submit {
+  border: 0;
+  background-color: #4da558;
+  color: white;
+  font-weight: 500;
+}
+
+.tag-persen {
+  font-size: 1.4rem;
+}
+
+.leader .image-con {
+  width: 2rem;
+  margin-right: 1rem;
+}
+.leader img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a.add-new {
+  font-weight: 500;
+  color: white;
+  background-color: #4da558;
+  text-decoration: none;
+}
+.add-new :hover {
+  background-color: #41884a;
+}
+
+.bolder {
+  font-weight: 700;
+}
+
+td {
+  height: 4.5rem;
+}
+
+th {
+  font-size: 0.9rem;
+}
