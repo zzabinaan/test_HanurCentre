@@ -26,7 +26,7 @@ User/admin harus mengisi field yang ada, setelah itu dapat melakukan 'submit', b
 ![monitoring-page(newProjectAdded)](https://user-images.githubusercontent.com/92689956/179536142-9d1a90b8-280e-4d99-a251-507fb6d14551.png)
 Data yang telah diinputkan dapat telah masuk dalam tabel Monitoring Projects
 
-##Edit Projects
+## Edit Projects
 
 ![edit-projects](https://user-images.githubusercontent.com/92689956/179537156-df478dba-1208-4585-9e65-74add22a5e2f.png)
 Untuk setiap project dapat dilakukan edit dengan mengklik icon pensil yang ada pada tiap bagian kanan kolom project.
@@ -39,14 +39,14 @@ Halaman edit akan menampilkan rincian dari monitoring projects berupa form yang 
 
 ![editProjects-page(edited-on-progress)](https://user-images.githubusercontent.com/92689956/179537933-a06baae2-1a51-4ade-a585-108d7db44dee.png)
 
-### edit berhasil
+### Edit berhasil
 Jika edit berhasil, maka tabel monitoring project juga akan ter-updtae seperti berikut :
 ![edit-success](https://user-images.githubusercontent.com/92689956/179538887-99400725-0d97-4977-ad38-97e1dab914ad.png)
 ![monitoring-page(editedProjects-success)](https://user-images.githubusercontent.com/92689956/179538897-8c76618b-3e5f-4340-a7ef-f108d7a90d8b.png)
 progress dari monitoring projects milik client Dispora Jaw Timur yang awalnya 40% berubah menjadi 80%
 
 
-##DELETE PROJECTS
+## DELETE PROJECTS
 Untuk melakukan delete, admin/user cukup melakukan klik pada button icon sampah yang berada pada sebelah kiri button edit.
 ![delete-icon](https://user-images.githubusercontent.com/92689956/179539514-9048e988-bd24-40da-bedd-699bd7511101.png)
 
@@ -58,7 +58,7 @@ setelah menyetujui, maka data akan benar-benar terhapus dan tabel monitoring aka
 ![image](https://user-images.githubusercontent.com/92689956/179540067-1ec7f3f1-721b-4e6b-8d64-7097a4bc02fe.png)
 
 
-##SEARCH PROJECTS
+## SEARCH PROJECTS
 Pencarian projects dapat dilakukan dengan mengetikkan keyword pencarian, entah berdasar nama project maupun client. Misalkan disini saya mencari dengan keyword 'si'
 ![search-something](https://user-images.githubusercontent.com/92689956/179540592-31a59b20-1558-4726-85ca-c4fb888b67c0.png)
 
