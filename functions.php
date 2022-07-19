@@ -1,5 +1,7 @@
 <?php
 $conn = mysqli_connect("localhost", "root", "", "test_hc");
+// $dataMonitoring = query("SELECT * FROM monitoring");
+// $dataLeader = query("SELECT * FROM leader");
 
 function query($query)
 {
@@ -12,6 +14,30 @@ function query($query)
     return $rows;
 }
 
+
+function mapingdata($monitoring, $leader)
+{
+    $data = array_map(function ($monitor) use ($leader) {
+        $daftarleader = array_filter($leader, function ($lead) use ($monitor) {
+            return $lead['id'] == $monitor['leader_id'];
+        });
+
+        // masukin array leader yang punya id == leader id kedalam array monitor
+        // $monitor['lead'] = $daftarleader;//
+
+        // naruh isi data leader ke $monitor[]
+        $leader_name = array_column($daftarleader, 'leader_name');
+        $monitor['leader_name'] = array_shift($leader_name);
+        $profile_picture = array_column($daftarleader, 'profile_picture');
+        $monitor['profile_picture'] = array_shift($profile_picture);
+        $leader_email = array_column($daftarleader, 'email');
+        $monitor['leader_email'] = array_shift($leader_email);
+
+        return $monitor;
+    }, $monitoring);
+    // var_dump($data);
+    return $data;
+}
 function tanggal_indo($tanggal)
 {
     $bulan = array(

@@ -6,6 +6,8 @@ $leader = query("SELECT * FROM leader");
 if (isset($_GET["cari"])) {
     $monitoring = cari($_GET["keyword"]);
 }
+$dataMonitoring = mapingdata($monitoring, $leader);
+// var_dump($data);
 ?>
 
 <!doctype html>
@@ -52,33 +54,34 @@ if (isset($_GET["cari"])) {
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($monitoring as $m) : ?>
-                    <?php $i = $m["leader_id"] - 1;
-                    $progress = $m["progress"] * 100;
+                <?php foreach ($dataMonitoring as $data) : ?>
+                    <?php
+                    // $i = $m["leader_id"] - 1;
+                    $progress = $data["progress"] * 100;
                     ?>
                     <tr>
                         <td>
                             <div class="h-100 d-flex align-items-center">
-                                <?= $m["project_name"] ?>
+                                <?= $data["project_name"] ?>
                             </div>
 
                         </td>
                         <td>
                             <div class="h-100 d-flex align-items-center">
-                                <?= $m["client_name"] ?>
+                                <?= $data["client_name"] ?>
                             </div>
                         </td>
                         <td>
                             <div class="h-100 leader d-flex align-items-center">
                                 <div class="image-con">
-                                    <img class="rounded-circle" src="img/<?= $leader[$i]["profile_picture"] ?>" alt="profile-leader">
+                                    <img class="rounded-circle" src="img/<?= $data["profile_picture"] ?>" alt="profile-leader">
                                 </div>
                                 <div class="w-75">
                                     <div class="bolder">
-                                        <?= $leader[$i]["leader_name"] ?>
+                                        <?= $data["leader_name"] ?>
                                     </div>
                                     <div>
-                                        <?= $leader[$i]["email"] ?>
+                                        <?= $data["leader_email"] ?>
                                     </div>
 
                                 </div>
@@ -87,12 +90,12 @@ if (isset($_GET["cari"])) {
                         </td>
                         <td>
                             <div class="h-100 d-flex align-items-center">
-                                <?= tanggal_indo($m["start_date"]) ?>
+                                <?= tanggal_indo($data["start_date"]) ?>
                             </div>
                         </td>
                         <td>
                             <div class="h-100 d-flex align-items-center">
-                                <?= tanggal_indo($m["end_date"]) ?>
+                                <?= tanggal_indo($data["end_date"]) ?>
                             </div>
                         </td>
                         <td style="width: 15rem;">
@@ -121,8 +124,8 @@ if (isset($_GET["cari"])) {
                         </td>
                         <td>
                             <div class="h-100 d-flex align-items-center">
-                                <a href="delete.php?id=<?= $m["id"]; ?>" class="bg-danger m-1 pt-1 pb-2 ps-2 pe-2 rounded" onclick="return confirm('Yakin Menghapus Data <?= $m['project_name'] ?>');"><img src="img/delete.png" alt="delete" style="width: 0.9rem;"></a>
-                                <a href="edit.php?id=<?= $m["id"]; ?>" class=" m-1 pt-1 pb-2 ps-2 pe-2 rounded" style="background-color:#13b780;"><img src="img/draw.png" alt="edit" style="width: 0.9rem; "></a>
+                                <a href="delete.php?id=<?= $data["id"]; ?>" class="bg-danger m-1 pt-1 pb-2 ps-2 pe-2 rounded" onclick="return confirm('Yakin Menghapus Data <?= $data['project_name'] ?>');"><img src="img/delete.png" alt="delete" style="width: 0.9rem;"></a>
+                                <a href="edit.php?id=<?= $data["id"]; ?>" class=" m-1 pt-1 pb-2 ps-2 pe-2 rounded" style="background-color:#13b780;"><img src="img/draw.png" alt="edit" style="width: 0.9rem; "></a>
                             </div>
 
                         </td>
